@@ -1,0 +1,8 @@
+<template>
+    <template if:true={showRoomInfo}>
+        <div class="slds-p-around-medium lgc-bg">
+            <slot name="roomInfo"></slot>
+            <slot></slot>
+        </div> 
+    </template>
+</template>
