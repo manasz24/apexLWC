@@ -1,0 +1,30 @@
+<apex:page id="thePage" lightningStylesheets="true" showHeader="true" controller="MD_SalesforceTokenUtils">
+    <script>
+    window.onload = function(){
+    	let code = '{$CurrentPage.parameters.code}';    
+    if(code){
+        fetchAccessToken(); //ActionFunction
+    	}
+    }
+    </script>
+    <apex:form id="theForm">
+        <apex:outputPanel id="errorMessage"></apex:outputPanel>
+    <apex:pageMessages ></apex:pageMessages>	
+        <apex:actionStatus id="theStatus">
+        	Loading...
+        </apex:actionStatus>
+          <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+    
+
+    
+    <apex:actionFunction name="fetchAccessToken" status="theStatus errorMessage" action="{!getAccessToken}" reRender="theForm"/>
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
+        <apex:commandButton value="Authorize Salesforce Account" status="the status Error message" action="{!getAuthCode}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>    
+    </apex:form>
+</apex:page>
