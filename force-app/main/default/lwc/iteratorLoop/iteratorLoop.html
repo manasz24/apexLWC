@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="for-each Loop">
+        <div class=" slds-var-m-around-medium">
+            <template iterator:it={ceoList}>
+
+                
+                <ul key={it.value.id} class="slds-has-dividers_top-space">
+                    <div if:true ={it.first} class="slds-box slds-theme_shades">
+                        <strong> 
+                            List of ceoList is:
+                        </strong>
+                    </div>
+                    <li class="slds-item">{it.value.name} - {it.value.age}</li>
+                    </ul>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="for-each Loop">
+        <div class=" slds-var-m-around-medium">
+            <template for:each={ceoList} for:item="ceo"> 
+                    <li key={ceo.id} class="slds-item">{ceo.name} {ceo.car}</li>
+            </template>
+        </div>
+    </lightning-card>
+
+
+</template>
+
+<!-- value is important in iterator -->

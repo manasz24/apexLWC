@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="child to Parent comm">
+        <div class=" slds-var-m-around-medium">
+            <lightning-button label="Click me to open a modal" onclick={handleClick}></lightning-button>
+            <template lwc:if={showModal}>
+                <c-c2p-model-component oncancel={cancelHandler}>
+                </c-c2p-model-component>
+            </template>
+            </div>
+    </lightning-card>
+</template>
