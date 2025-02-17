@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="getObjectInfoAdapter">
+        <div class="slds-m-around_medium">
+            <template if:true={Data}>
+                <p>Object Name: {Data.apiName}</p>
+                <p>Object Label: {Data.label}</p>
+                <p>Object Key Prefix: {Data.keyPrefix}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
