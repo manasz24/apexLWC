@@ -1,4 +1,3 @@
-
 export default class Singleton {
 
     static instance;
@@ -27,4 +26,3 @@ export default class Singleton {
         this._data = data;
     }
 }
-
