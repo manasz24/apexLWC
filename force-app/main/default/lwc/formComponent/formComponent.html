@@ -1,0 +1,19 @@
+<template>
+    <div class="form-component">
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" value={email} oninput={handleInputChange} class={emailClass} />
+            <p>Email is <strong>{emailValidationState}</strong>.</p>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" value={phone} oninput={handleInputChange} class={phoneClass} />
+            <p>Phone is <strong>{phoneValidationState}</strong>.</p>
+        </div>
+        <div>
+            <label for="text">Text:</label>
+            <input type="text" name="text" value={text} oninput={handleInputChange} class={textClass} />
+            <p>Text is <strong>{textValidationState}</strong>.</p>
+        </div>
+    </div>
+</template>
