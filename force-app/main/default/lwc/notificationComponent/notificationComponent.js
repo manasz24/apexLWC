@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
-import {notificationFactory} from 'c/notificationFactory';
+import notificationFactory from 'c/notificationFactory';
 
 console.log('NotificationFactory:', notificationFactory);
 
