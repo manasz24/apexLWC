@@ -10,6 +10,8 @@ export default class LmsComponentA extends LightningElement {
 
     inputHandler(event){
         this.inputvalue=event.target.value;
+
+
     }
 
     sendMessage(){
