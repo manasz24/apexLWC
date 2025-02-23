@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Apex Imperative Call" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Fetch Account" onclick={fetchAccount} variant="brand"></lightning-button>
+            </div>
+            <div class="slds-m-top_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.Id}>
+                
+                    <div class="slds-m-top_medium">
+                        <lightning-formatted-text value={acc.Name}></lightning-formatted-text> 
+                        <lightning-formatted-text value={acc.Phone}></lightning-formatted-text> 
+                        <lightning-formatted-text value={acc.Website}></lightning-formatted-text>
+                        <br/> 
+                    </div>         
+            </div>
+            </template>
+                </template>
+            </div>
+                </lightning-card> 
+</template>
