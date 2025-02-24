@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Refresh Demo LWC" icon-name="custom:custom14">
+        
+        <template if:true={contacts.data}>
+            <lightning-datatable
+                key-field="Id" 
+                data={contacts.data}
+                columns={columns}
+                onsave={handleSave} 
+                draft-values={draftValues}> 
+            </lightning-datatable>
+        </template>
+        <template if:false={contacts.data}>
+            <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            <p class="slds-p-horizontal_small">No Records to display</p>    
+        </template>
+    </lightning-card>
+</template>
