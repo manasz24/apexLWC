@@ -1,0 +1,38 @@
+<template>
+  <lightning-card title="Client Side Filtering Demo">
+    <div class="slds-m-around_medium">
+      <lightning-layout class="slds-m-bottom_small">
+        <lightning-layout-item padding="around-small" size="2" flexibility="auto">
+          <lightning-combobox
+            label="Select Filter"
+            value={selectedFilter}
+            options={FilterByOptions}
+            onchange={handleFilterChange}
+          ></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4" flexibility="auto">
+          <lightning-input label="Filter" type="text" onkeyup={handleSearchKeyChange}></lightning-input>
+        </lightning-layout-item>
+      </lightning-layout>
+      <table>
+        <thead>
+          <tr>
+            <template for:each={headings} for:item="heading">
+              <th key={heading}>{heading}</th>
+            </template>
+          </tr>
+        </thead>
+        <tbody>
+          <template for:each={filteredData} for:item="data">
+            <tr key={data.Id}>
+              <td>{data.Id}</td>
+              <td>{data.Name}</td>
+              <td>{data.Email}</td>
+              <td>{data.Title}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+  </lightning-card>
+</template>
