@@ -1,0 +1,16 @@
+<template>
+  <template if:true={mapMarkers.length}>
+    <lightning-card title="Map in LWC Demo" icon-name="custom:custom63">
+      <div class="slds-m-around_medium"></div>
+      <lightning-map
+        map-markers={mapMarkers}
+        markers-title={markersTitle}
+        onmarkerselect={handleMarkerSelect}
+        selected-marker-value={selectedMarker}
+      ></lightning-map>
+    </lightning-card>
+  </template>
+  <template if:false={mapMarkers.length}>
+    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+  </template>
+</template>

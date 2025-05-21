@@ -4,12 +4,12 @@ public class MD_SalesforceTokenUtils {
     ? 'https://login.salesforce.com'
     : 'https://test.salesforce.com';
   //System.debug(orgURL);
-  String redirect_uri = System.URL.getOrgDomainURL().toExternalForm() + '/apex/' + config.page_name__c;
+  String redirecturi = System.URL.getOrgDomainURL().toExternalForm() + '/apex/' + config.page_name__c;
 
   public PageReference getAuthCode() {
     //https://MyDomainName.my.salesforce.com/services/oauth2/authorize?
     //client_id=3MVG9IHf89I1t8hrvswazsWedXWY0i1qK20PSFaInvUgLFB6vrcb9bbWFTSIHpO8G2jxBLJA6uZGyPFC5Aejq&
-    //redirect_uri=https://www.mycustomerorderstatus.com/oauth2/callback&
+    //redirecturi=https://www.mycustomerorderstatus.com/oauth2/callback&
     //response_type=code
 
     String authorizeUrl =
@@ -18,7 +18,7 @@ public class MD_SalesforceTokenUtils {
       '?client_id=' +
       config.client_id__c +
       '&redirect_uri=' +
-      redirect_uri +
+      redirecturi +
       '&response_type=code' +
       '&code_challenge=';
     //System.debug(authorizeUrl);
