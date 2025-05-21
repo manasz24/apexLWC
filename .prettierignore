@@ -6,5 +6,6 @@
 .localdevserver
 .sfdx
 .vscode
-
+*.cls-meta.xml
+*.js-meta.xml
 coverage/
